@@ -2,4 +2,4 @@
  My C# Console project
  
  - Each day is a new .cs file
- - data input files can be found under folder "Data"
+ - Data input files can be found under folder "Data"
