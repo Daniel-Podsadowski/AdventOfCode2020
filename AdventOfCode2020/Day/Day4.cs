@@ -28,6 +28,8 @@ namespace AdventOfCode2020
                     if (hasbyr && hasiyr && haseyr && hashgt && hashcl && hasecl && haspid)
                     {
                         numValid++;
+						//Part 2 - I should have seperated all the validation into their own mini functions
+						//to make the code cleaner :/ oh well, maybe next time
                         var passportArray = passport.Split(" ");
                         int byr = 0, iyr = 0, eyr = 0;
                         bool isCm = false;
