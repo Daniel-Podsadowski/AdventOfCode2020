@@ -7,7 +7,7 @@ namespace AdventOfCode2020
     {
         public static void Main()
         {
-            var seats = File.ReadAllLines(@"..\..\..\Data\test.txt");
+            var seats = File.ReadAllLines(@"..\..\..\Data\day5.txt");
 
             int highestSeatId = 0;
             foreach (var seat in seats)
@@ -31,33 +31,28 @@ namespace AdventOfCode2020
                 if (letter == 'F')
                 {
                     high = mid;
-                    mid = (int)Math.Ceiling(((decimal)low + high) / 2);
                 }
-                if (letter == 'B')
-                {
+                else {
                     low = mid;
-                    mid = (low + high) / 2;
                 }
+                mid = (low + high) / 2;
             }
-            row = mid;
+            row = high;
             low = 0;
             mid = 4;
             high = 7;
             for (var i = 7; i < 10; i++)
             {
                 var letter = seat[i];
-                if (letter == 'L')
-                {
+                if (letter == 'L') { 
                     high = mid;
-                    mid = (int)Math.Ceiling(((decimal)low + high) / 2);
                 }
-                if (letter == 'R')
-                {
+                else {
                     low = mid;
-                    mid = (int)Math.Ceiling(((decimal)low + high) / 2);
                 }
+                mid = (low + high) / 2;
             }
-            column = mid;
+            column = high;
             seatId = (row * 8) + column;
             return seatId;
         }
