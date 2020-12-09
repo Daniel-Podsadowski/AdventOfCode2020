@@ -11,7 +11,7 @@ namespace AdventOfCode2020
         {
             var lines = File.ReadAllLines(@"..\..\..\Data\day7.txt");
 
-
+            //Yeah that's not happening...
         }
     }
 }
